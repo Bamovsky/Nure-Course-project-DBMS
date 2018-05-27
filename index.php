@@ -1,7 +1,7 @@
 <?php 
 include ("db.php");
 $categories = array();
-if ($result = $mysqli->query('SELECT * FROM categories')) {
+if ($result = $mysqli->query('SELECT * FROM categories ORDER BY title')) {
     while($tmp = $result->fetch_assoc()) {
         $categories[] = $tmp;
     }
@@ -52,7 +52,7 @@ if ($result = $mysqli->query('SELECT * FROM products')) {
               <a class="nav-link" href="#">О проекте</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Вход</a>
+              <a class="nav-link" href="reg.php">Вход</a>
             </li>
           </ul>
         </div>
@@ -114,12 +114,9 @@ if ($result = $mysqli->query('SELECT * FROM products')) {
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Черкашин АКТСИу 17-2</p>
       </div>
-      <!-- /.container -->
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
