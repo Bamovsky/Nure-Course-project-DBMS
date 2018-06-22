@@ -22,9 +22,9 @@
     }
     else {
     if ($myrow['password']==md5($password)) {
+    $_SESSION['IsManager']=$myrow['IsManager'];    
     $_SESSION['login']=$myrow['login']; 
-    $_SESSION['id']=$myrow['id'];
-    echo "Вы успешно вошли на сайт! <a href='index.php'>Главная страница</a>";
+    header('Location: index.php');
     }
     else {
     exit ("Извините, введённый вами login или пароль неверный.");

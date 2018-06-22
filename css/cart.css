@@ -1,0 +1,81 @@
+body {
+	width: 992px;
+	margin: 0 auto;
+}
+h1{
+  text-align: center;
+}
+
+a {
+	text-decoration: none !important;
+	outline: none !important;
+	color: #000 ;
+}
+
+#buttonWrap{
+	display: flex;
+	justify-content: center;
+}
+
+#deletes {
+	color:#166079;
+}
+
+.buttons {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: rgb(64,199,129);
+  box-shadow: 0 -3px rgb(53,167,110) inset;
+  transition: 0.2s;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.buttons:hover {
+ background: rgb(53, 167, 110);
+}
+
+.buttons:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+
+.but {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dotted {
+list-style: none;
+font-family: 'Marck Script', cursive;
+}
+.dotted li {
+margin-bottom: 5px;
+border-bottom: 2px #404B51 dotted;
+font-size: 26px;
+line-height: 1;
+}
+.dotted li span:nth-child(odd) {
+padding-right: 6px; 
+color: #404B51;
+}
+.dotted li span:nth-child(even) {
+float: right; 
+padding-left: 6px;
+color: #35D1CE;
+}
+.dotted span {
+background: white;
+position: relative;
+bottom: -7px;
+}
+
+.quantity {
+  width: 103px;
+  margin-left: 20px;
+  height: 25px;
+}

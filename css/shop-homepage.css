@@ -7,6 +7,212 @@ body {
 	}
 }
 
+.order {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order button{
+   margin-top: 15px;
+   margin-right: 10px;  
+}
+
+.compleate {
+  width: 100%;
+}
+
 .h-100 {
 	margin-top: 10px;
 }
+
+#cat a {
+	font-weight: bold;
+}
+
+#cat a:hover {
+	cursor: pointer;
+	background: grey;
+}
+
+.fixed {
+	min-height: 486px;
+}
+
+
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #9faab7;
+}
+.option-input:checked {
+  background: #40e0d0;
+}
+.option-input:checked::before {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 26.66667px;
+  text-align: center;
+  line-height: 40px;
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+
+.rate {
+  margin: 0;
+}
+
+#search {
+  border-radius: 20px;
+  outline: none;
+  padding-left: 10px;
+  margin-top: 2px;
+  margin-right: 10px;
+}
+
+#table1 {
+    margin: 43px;
+    width: 100%;
+    border: 2px solid;
+    border-color: #000 !important;
+    border-collapse: collapse;
+
+}
+#table1 tbody {
+  border-color: #000 !important;
+  border:2px;
+}
+#table1 td, tr {
+  border: 2px solid;
+
+}
+
+/* Стили формы */
+#application {
+    width: 475px;
+    margin: 0 auto;
+}
+ 
+/*Стили полей для ввода*/
+#applicationName, #applicationLastName, #applicationTelephone, #applicationMiddleName, #applicationCart,
+#applicationAddr{
+    width: 100%;
+    height: 30px;
+    background: none;
+    margin-top: 25px;
+    border: 2px solid #000;
+    border-radius: 40px;
+    text-align: center;
+    color: #000;
+    font-size: 24px;
+}
+/*Стили полей при клике по ним*/
+#applicationName:focus, #applicationLastName:focus, #applicationTelephone:focus, #applicationMiddleName:focus
+, #applicationCart:focus ,#applicationAddr:focus 
+ {
+    border: 2px solid #30ad64;
+    outline:none;
+}
+ 
+/*Стили текста, выводящегося в placeholder*/
+::-webkit-input-placeholder {
+    color: #000;
+    font-family: 'PT Sans', sans-serif;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+ 
+::-moz-placeholder  {
+    color: #fff;
+    font-family: 'PT Sans', sans-serif;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}  /* Firefox 19+ */
+ 
+:-moz-placeholder {
+    color: #fff;
+    font-family: 'PT Sans', sans-serif;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}  /* Firefox 18- */
+ 
+:-ms-input-placeholder {
+    color: #fff;
+    font-family: 'PT Sans', sans-serif;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+ 
+::placeholder {
+    color: #000;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+/*Стили для кнопки*/
+.applicationButton {
+    margin-top: 25px;
+    background: #30ad64;
+    border: none;
+    width: 100%;
+    height: 73px;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    cursor: pointer;
+}
+    .applicationButton:hover {
+        background: #d68c18;
+    }

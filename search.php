@@ -1,21 +1,8 @@
 <?php 
-session_start();
 include ("db.php");
-if (isset($_POST["name"])){
-$name = $_POST["name"];
-}
-if (isset($_POST["sort"])){
-$sort = $_POST["sort"];
-}
-else {
-$sort = 'DESC';
-}
-if (isset($_POST["name"])){
-$_SESSION['catname']=$name;
-}
+$search = $_POST["search"];
 $products = array();
-if ($result = $mysqli->query("SELECT * FROM products Where CatName='{$_SESSION['catname']}' 
-  ORDER BY `price` $sort")) {
+if ($result = $mysqli->query("SELECT * FROM products Where title LIKE '%$search%'")) {
     while($tmp = $result->fetch_assoc()) {
         $products[] = $tmp;
     }
@@ -37,7 +24,7 @@ if ($result = $mysqli->query("SELECT * FROM products Where CatName='{$_SESSION['
                     echo $temp['rate'] . "%</p>";
                   }
                   else {
-                    echo "Еще не покупали </p>";
+                    echo "Еще не покупали</p>";
                   }
                   ?>
   <p> Осталось: <?php echo $product['quantity'] . "</p>"; ?>
